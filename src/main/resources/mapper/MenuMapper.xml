@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.studentGrade.mapper.MenuMapper">
+
+    <select id="getLevelMenu" resultType="com.studentGrade.entity.Menu" parameterType="int">
+        select * from menu where father=#{level}
+    </select>
+    <select id="getMenuList" resultType="com.studentGrade.entity.Menu">
+        select * from menu;
+    </select>
+    <select id="getMenuById" resultType="com.studentGrade.entity.Menu">
+        select * from menu where id=#{id}
+    </select>
+
+</mapper>
